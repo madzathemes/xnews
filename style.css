@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.1
+  	Version: 1.0
     Theme Name: Xnews
     Theme URI: http://xnews.magazinethemes.staging.wpengine.com/
     Description: Magazine / Blog
@@ -2855,7 +2855,7 @@ opacity: 0.7
   padding: 2px 10px;
   font-weight: 700;
   background: none;
-  border-left: 10px #E91E63 solid;
+  border-left: 10px #ff6c00 solid;
   color: black;
 }
 .col-col-1 .single-cat-wrap .post-categories {
