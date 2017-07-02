@@ -24,5 +24,6 @@
 </div>
 
 <a href="#" class="footer-scroll-to-top mt-theme-background"></a>
+<?php  wp_footer(); ?>
 </body>
 </html>
