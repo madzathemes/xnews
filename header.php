@@ -9,7 +9,7 @@
 </head>
 
 <?php
-$option = get_option("fullstory_theme_options");
+$option = get_option("xnews_theme_options");
 ?>
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
@@ -36,19 +36,19 @@ if(!empty($style)){
 
 <div class="mt-smart-menu">
 	<span class="close pointer"></span>
-	<?php fullstory_logo(); ?>
-	<?php fullstory_nav_mobile(); ?>
-	<?php fullstory_socials(); ?>
+	<?php xnews_logo(); ?>
+	<?php xnews_nav_mobile(); ?>
+	<?php xnews_socials(); ?>
 </div>
 
 <div class="mt-outer-wrap">
 
-<?php fullstory_header(); ?>
+<?php xnews_header(); ?>
 <?php if($pagetop=="on") { ?>
 <div class="container">
 	<div class="row mt-head">
 		<div class="col-md-8 pull-left">
-			<div class="mt-head-title pull-left"><?php if ( false == get_theme_mod( 't_p_last_rumor', false ) ) { $t_p_last_rumor = esc_html__("Last Rumor:", "fullstory");  } else { $t_p_last_rumor = get_theme_mod( 't_p_last_rumor' ); } echo esc_html($t_p_last_rumor) ?></div>
+			<div class="mt-head-title pull-left"><?php if ( false == get_theme_mod( 't_p_last_rumor', false ) ) { $t_p_last_rumor = esc_html__("Last Rumor:", "xnews");  } else { $t_p_last_rumor = get_theme_mod( 't_p_last_rumor' ); } echo esc_html($t_p_last_rumor) ?></div>
 			<div class="mt-head-aleft pull-left"></div>
 			<div class="mt-head-aright pull-left"></div>
 			<div class="mt-head-text pull-left">

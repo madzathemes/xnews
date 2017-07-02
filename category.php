@@ -10,7 +10,7 @@ $cat = get_query_var('cat');
 $get_cat = get_category ($cat);
 $cat_slug = $get_cat->slug;
 $cat_title = single_cat_title("", false);
-if ( false == get_theme_mod( 't_p_category', false ) ) { $t_p_category = esc_html__("Category", "fullstory");  } else { $t_p_category = get_theme_mod( 't_p_category' ); }
+if ( false == get_theme_mod( 't_p_category', false ) ) { $t_p_category = esc_html__("Category", "xnews");  } else { $t_p_category = get_theme_mod( 't_p_category' ); }
 
 $option = get_option("magazin_theme_options");
 $default_posts_per_page = get_option( 'posts_per_page' );

@@ -9,7 +9,7 @@ get_header();
 if(function_exists('magazin_PostViews')){  magazin_PostViews(get_the_ID()); }
 
 $style = get_post_meta(get_the_ID(), "magazin_post_style", true);
-$option = get_option("fullstory_theme_options");
+$option = get_option("xnews_theme_options");
 $default = "";
 if(!empty($option['post_style'])) {
 	$default = $option['post_style'];
@@ -101,7 +101,7 @@ endwhile;
 </div>
 <div class="hidde" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 	<div class="hidde" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-	<?php $option = get_option("fullstory_theme_options"); ?>
+	<?php $option = get_option("xnews_theme_options"); ?>
 	<?php if(!empty($option['header_logo'])) { ?><meta itemprop="url" content="<?php echo esc_url($option['header_logo']); ?>"><?php } ?>
 	<?php if(!empty($option['logo_width'])) { ?><meta itemprop="width" content="<?php echo esc_attr($option['logo_width']); ?>"><?php } ?>
 	<?php if(!empty($option['logo_height'])) { ?><meta itemprop="height" content="<?php echo esc_attr($option['logo_height']); ?>"><?php } ?>

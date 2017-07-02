@@ -1,25 +1,25 @@
 <?php
-function fullstory_customize_posts($wp_customize){
+function xnews_customize_posts($wp_customize){
 
 
-  Kirki::add_field( 'fullstory_theme_options[post_carousel]', array(
+  Kirki::add_field( 'xnews_theme_options[post_carousel]', array(
 	'type'        => 'switch',
-	'settings'    => 'fullstory_theme_options[post_carousel]',
-	'label'       => esc_html__( 'Post Carousel', 'fullstory' ),
+	'settings'    => 'xnews_theme_options[post_carousel]',
+	'label'       => esc_html__( 'Post Carousel', 'xnews' ),
 	'section'     => 'posts_default_settings',
 	'default'     => 'yes',
   'option_type' => 'option',
 	'priority'    => 10,
 	'choices'     => array(
-		'yes'  => esc_attr__( 'Enable', 'fullstory' ),
-		'no' => esc_attr__( 'Disable', 'fullstory' ),
+		'yes'  => esc_attr__( 'Enable', 'xnews' ),
+		'no' => esc_attr__( 'Disable', 'xnews' ),
 	),
   ) );
 
-  Kirki::add_field( 'fullstory_theme_options[post_sidebar]', array(
+  Kirki::add_field( 'xnews_theme_options[post_sidebar]', array(
   	'type'        => 'radio-image',
-  	'settings'    => 'fullstory_theme_options[post_sidebar]',
-  	'label'       => esc_html__( 'Sidebar Position', 'fullstory' ),
+  	'settings'    => 'xnews_theme_options[post_sidebar]',
+  	'label'       => esc_html__( 'Sidebar Position', 'xnews' ),
   	'section'     => 'posts_default_settings',
   	'default'     => 'left',
     'option_type' => 'option',
@@ -30,10 +30,10 @@ function fullstory_customize_posts($wp_customize){
   	   ),
   ));
 
-  Kirki::add_field( 'fullstory_theme_options[post_style]', array(
+  Kirki::add_field( 'xnews_theme_options[post_style]', array(
   	'type'        => 'radio-image',
-  	'settings'    => 'fullstory_theme_options[post_style]',
-  	'label'       => esc_html__( 'Post Style', 'fullstory' ),
+  	'settings'    => 'xnews_theme_options[post_style]',
+  	'label'       => esc_html__( 'Post Style', 'xnews' ),
   	'section'     => 'posts_default_settings',
   	'default'     => '1',
     'option_type' => 'option',
@@ -55,5 +55,5 @@ function fullstory_customize_posts($wp_customize){
 
 }
 
-add_action('customize_register', 'fullstory_customize_posts');
+add_action('customize_register', 'xnews_customize_posts');
 ?>

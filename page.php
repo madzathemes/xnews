@@ -7,7 +7,7 @@
 get_header(); ?>
 <div class="mt-container-wrap"  itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
-	<?php fullstory_title(); ?>
+	<?php xnews_title(); ?>
 	<div class="container mt-content-container">
 
 	<?php /* Sidebar Meta from Magazin framework */

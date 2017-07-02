@@ -1,5 +1,5 @@
-<?php function fullstory_title() {
-if ( false == get_theme_mod( 't_p_search_result_for', false ) ) { $t_p_search_result_for = esc_html__("Search Results for: %s", "fullstory");  } else { $t_p_search_result_for = get_theme_mod( 't_p_search_result_for' ).' %s'; }
+<?php function xnews_title() {
+if ( false == get_theme_mod( 't_p_search_result_for', false ) ) { $t_p_search_result_for = esc_html__("Search Results for: %s", "xnews");  } else { $t_p_search_result_for = get_theme_mod( 't_p_search_result_for' ).' %s'; }
 ?>
   <div class="container page-title">
     <div class="row">
@@ -16,4 +16,4 @@ if ( false == get_theme_mod( 't_p_search_result_for', false ) ) { $t_p_search_re
   <?php
 }
 
-add_filter('fullstory_title','fullstory_title'); ?>
+add_filter('xnews_title','xnews_title'); ?>

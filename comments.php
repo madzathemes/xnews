@@ -3,20 +3,20 @@
  * @author madars.bitenieks
  * @copyright 2017
  */
- if ( false == get_theme_mod( 't_c_comments_passowrd', false ) ) { $t_c_comments_passowrd = esc_html__("This post is password protected. Enter the password to view and post comments.", "fullstory");  } else { $t_c_comments_passowrd = get_theme_mod( 't_c_comments_passowrd' ); }
- if ( false == get_theme_mod( 't_c_name', false ) ) { $t_c_name = esc_html__("Name", "fullstory");  } else { $t_c_name = get_theme_mod( 't_c_name' ); }
- if ( false == get_theme_mod( 't_c_email', false ) ) { $t_c_email = esc_html__("Email", "fullstory");  } else { $t_c_email = get_theme_mod( 't_c_email' ); }
- if ( false == get_theme_mod( 't_c_website', false ) ) { $t_c_website = esc_html__("Website", "fullstory");  } else { $t_c_website = get_theme_mod( 't_c_website' ); }
- if ( false == get_theme_mod( 't_c_email_not_publish', false ) ) { $t_c_email_not_publish = esc_html__("Your email address will not be published.", "fullstory");  } else { $t_c_email_not_publish = get_theme_mod( 't_c_email_not_publish' ); }
- if ( false == get_theme_mod( 't_c_leave_a_comment', false ) ) { $t_c_leave_a_comment = esc_html__("Leave a Comment", "fullstory");  } else { $t_c_leave_a_comment = get_theme_mod( 't_c_leave_a_comment' ); }
- if ( false == get_theme_mod( 't_c_leave_a_reply_to', false ) ) { $t_c_leave_a_reply_to = esc_html__("Leave a Reply to %s", "fullstory");  } else { $t_c_leave_a_reply_to = get_theme_mod( 't_c_leave_a_reply_to' )." %s"; }
- if ( false == get_theme_mod( 't_c_submit_comment', false ) ) { $t_c_submit_comment = esc_html__("Submit Comment", "fullstory");  } else { $t_c_submit_comment = get_theme_mod( 't_c_submit_comment' ); }
+ if ( false == get_theme_mod( 't_c_comments_passowrd', false ) ) { $t_c_comments_passowrd = esc_html__("This post is password protected. Enter the password to view and post comments.", "xnews");  } else { $t_c_comments_passowrd = get_theme_mod( 't_c_comments_passowrd' ); }
+ if ( false == get_theme_mod( 't_c_name', false ) ) { $t_c_name = esc_html__("Name", "xnews");  } else { $t_c_name = get_theme_mod( 't_c_name' ); }
+ if ( false == get_theme_mod( 't_c_email', false ) ) { $t_c_email = esc_html__("Email", "xnews");  } else { $t_c_email = get_theme_mod( 't_c_email' ); }
+ if ( false == get_theme_mod( 't_c_website', false ) ) { $t_c_website = esc_html__("Website", "xnews");  } else { $t_c_website = get_theme_mod( 't_c_website' ); }
+ if ( false == get_theme_mod( 't_c_email_not_publish', false ) ) { $t_c_email_not_publish = esc_html__("Your email address will not be published.", "xnews");  } else { $t_c_email_not_publish = get_theme_mod( 't_c_email_not_publish' ); }
+ if ( false == get_theme_mod( 't_c_leave_a_comment', false ) ) { $t_c_leave_a_comment = esc_html__("Leave a Comment", "xnews");  } else { $t_c_leave_a_comment = get_theme_mod( 't_c_leave_a_comment' ); }
+ if ( false == get_theme_mod( 't_c_leave_a_reply_to', false ) ) { $t_c_leave_a_reply_to = esc_html__("Leave a Reply to %s", "xnews");  } else { $t_c_leave_a_reply_to = get_theme_mod( 't_c_leave_a_reply_to' )." %s"; }
+ if ( false == get_theme_mod( 't_c_submit_comment', false ) ) { $t_c_submit_comment = esc_html__("Submit Comment", "xnews");  } else { $t_c_submit_comment = get_theme_mod( 't_c_submit_comment' ); }
 
- if ( false == get_theme_mod( 't_c_comments', false ) OR false == get_theme_mod( 't_c_one_comment', false ) ) { $t_c_comments_ = _n( 'One Comment', '%1$s Comments', get_comments_number(), 'fullstory' );  } else { $t_c_comments = get_theme_mod( 't_c_comments' ); $t_c_one_comment = get_theme_mod( 't_c_one_comment' ); $t_c_comments_ = _n( $t_c_one_comment, '%1$s '. $t_c_comments.'', get_comments_number(), 'fullstory');  }
+ if ( false == get_theme_mod( 't_c_comments', false ) OR false == get_theme_mod( 't_c_one_comment', false ) ) { $t_c_comments_ = _n( 'One Comment', '%1$s Comments', get_comments_number(), 'xnews' );  } else { $t_c_comments = get_theme_mod( 't_c_comments' ); $t_c_one_comment = get_theme_mod( 't_c_one_comment' ); $t_c_comments_ = _n( $t_c_one_comment, '%1$s '. $t_c_comments.'', get_comments_number(), 'xnews');  }
 
- $fullstory_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
- if ( false == get_theme_mod( 't_c_older_comments', false ) ) { $t_c_older_comments = wp_kses(__( '<span class="meta-nav">&larr;</span> Older Comments', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_c_older_comments = get_theme_mod( 't_c_older_comments' ); $t_c_older_comments = wp_kses(( '<span class="meta-nav">&larr;</span> '.$t_c_older_comments), $fullstory_allowed_html_array ); }
- if ( false == get_theme_mod( 't_c_newer_comments', false ) ) { $t_c_newer_comments = wp_kses(__( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_c_newer_comments = get_theme_mod( 't_c_newer_comments' ); $t_c_newer_comments = wp_kses(( $t_c_newer_comments.' <span class="meta-nav">&rarr;</span>'), $fullstory_allowed_html_array ); }
+ $xnews_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
+ if ( false == get_theme_mod( 't_c_older_comments', false ) ) { $t_c_older_comments = wp_kses(__( '<span class="meta-nav">&larr;</span> Older Comments', 'xnews' ), $xnews_allowed_html_array );  } else { $t_c_older_comments = get_theme_mod( 't_c_older_comments' ); $t_c_older_comments = wp_kses(( '<span class="meta-nav">&larr;</span> '.$t_c_older_comments), $xnews_allowed_html_array ); }
+ if ( false == get_theme_mod( 't_c_newer_comments', false ) ) { $t_c_newer_comments = wp_kses(__( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'xnews' ), $xnews_allowed_html_array );  } else { $t_c_newer_comments = get_theme_mod( 't_c_newer_comments' ); $t_c_newer_comments = wp_kses(( $t_c_newer_comments.' <span class="meta-nav">&rarr;</span>'), $xnews_allowed_html_array ); }
 
 ?>
 <?php if ( comments_open() ) { ?><div class="mt-comment-area"><?php } ?>
@@ -45,7 +45,7 @@
 
 			<ol class="commentlist">
 				<?php
-					wp_list_comments( array( 'callback' => 'fullstory_comment' ) );
+					wp_list_comments( array( 'callback' => 'xnews_comment' ) );
 				?>
 			</ol>
             <div class="line-comment"></div>
@@ -78,8 +78,8 @@ $fields =  array(
 	'url'    => '<div class="comment-input col-md-4 mt_comment_i_3"><input class="input" id="url" name="url"  placeholder="'. esc_html($t_c_website) .'" type="text" value="' . esc_url( $commenter['comment_author_url'] ) . '" size="30" /></div></div>',
 );
 
-if ( false == get_theme_mod( 't_c_you_must_be', false ) OR false == get_theme_mod( 't_c_logged_in', false ) OR false == get_theme_mod( 't_c_to_post_a_comment', false ) ) { $t_c_must_log_in = wp_kses(__( 'You must be <a href="%s">logged in</a> to post a comment.', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_c_you_must_be = get_theme_mod( 't_c_you_must_be' ); $t_c_logged_in = get_theme_mod( 't_c_logged_in' ); $t_c_to_post_a_comment = get_theme_mod( 't_c_to_post_a_comment' ); $t_c_must_log_in = $t_c_you_must_be .' <a href="%s">'.$t_c_logged_in.'</a> '.$t_c_to_post_a_comment;  }
-if ( false == get_theme_mod( 't_c_loged_in_as', false ) OR false == get_theme_mod( 't_c_log_out', false ) ) { $t_c_loged_in_as = wp_kses(__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account" class="mt-theme-text">Log out?</a>', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_c_loged_in_as = get_theme_mod( 't_c_loged_in_as' ); $t_c_log_out = get_theme_mod( 't_c_log_out' ); $t_c_log_out_of_this = get_theme_mod( 't_c_log_out_of_this' ); $t_c_loged_in_as = $t_c_loged_in_as.' <a href="%1$s">%2$s</a>. <a href="%3$s" title="'.$t_c_log_out_of_this.'" class="mt-theme-text">'.$t_c_log_out.'</a>';  }
+if ( false == get_theme_mod( 't_c_you_must_be', false ) OR false == get_theme_mod( 't_c_logged_in', false ) OR false == get_theme_mod( 't_c_to_post_a_comment', false ) ) { $t_c_must_log_in = wp_kses(__( 'You must be <a href="%s">logged in</a> to post a comment.', 'xnews' ), $xnews_allowed_html_array );  } else { $t_c_you_must_be = get_theme_mod( 't_c_you_must_be' ); $t_c_logged_in = get_theme_mod( 't_c_logged_in' ); $t_c_to_post_a_comment = get_theme_mod( 't_c_to_post_a_comment' ); $t_c_must_log_in = $t_c_you_must_be .' <a href="%s">'.$t_c_logged_in.'</a> '.$t_c_to_post_a_comment;  }
+if ( false == get_theme_mod( 't_c_loged_in_as', false ) OR false == get_theme_mod( 't_c_log_out', false ) ) { $t_c_loged_in_as = wp_kses(__( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account" class="mt-theme-text">Log out?</a>', 'xnews' ), $xnews_allowed_html_array );  } else { $t_c_loged_in_as = get_theme_mod( 't_c_loged_in_as' ); $t_c_log_out = get_theme_mod( 't_c_log_out' ); $t_c_log_out_of_this = get_theme_mod( 't_c_log_out_of_this' ); $t_c_loged_in_as = $t_c_loged_in_as.' <a href="%1$s">%2$s</a>. <a href="%3$s" title="'.$t_c_log_out_of_this.'" class="mt-theme-text">'.$t_c_log_out.'</a>';  }
 
  $defaults = array(
   'comment_field'        => '<span class="comment-adres-not-publish">'. esc_html($t_c_email_not_publish) .'</span><p class="comment-textarea"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" ></textarea></p>',

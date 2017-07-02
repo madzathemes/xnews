@@ -1,15 +1,15 @@
 <?php
 
-if ( ! function_exists( 'fullstory_paging_nav' ) ) :
+if ( ! function_exists( 'xnews_paging_nav' ) ) :
 
-function fullstory_paging_nav() {
-	global $wp_query,  $fullstory_allowed_html_array;
+function xnews_paging_nav() {
+	global $wp_query,  $xnews_allowed_html_array;
 
 	// Don't print empty markup if there's only one page.
 	if ( $wp_query->max_num_pages < 2 )
 		return;
-		if ( false == get_theme_mod( 't_p_older_posts', false ) ) { $t_p_older_posts = wp_kses(__( '<span class="meta-nav">&larr;</span> Older posts', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_p_older_posts = get_theme_mod( 't_p_older_posts' ); $t_p_older_posts = wp_kses(( '<span class="meta-nav">&larr;</span> '.$t_p_older_posts), $fullstory_allowed_html_array ); }
-		if ( false == get_theme_mod( 't_p_newer_posts', false ) ) { $t_p_newer_posts = wp_kses(__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_p_newer_posts = get_theme_mod( 't_p_newer_posts' ); $t_p_newer_posts = wp_kses(( $t_p_newer_posts.' <span class="meta-nav">&rarr;</span>'), $fullstory_allowed_html_array ); }
+		if ( false == get_theme_mod( 't_p_older_posts', false ) ) { $t_p_older_posts = wp_kses(__( '<span class="meta-nav">&larr;</span> Older posts', 'xnews' ), $xnews_allowed_html_array );  } else { $t_p_older_posts = get_theme_mod( 't_p_older_posts' ); $t_p_older_posts = wp_kses(( '<span class="meta-nav">&larr;</span> '.$t_p_older_posts), $xnews_allowed_html_array ); }
+		if ( false == get_theme_mod( 't_p_newer_posts', false ) ) { $t_p_newer_posts = wp_kses(__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'xnews' ), $xnews_allowed_html_array );  } else { $t_p_newer_posts = get_theme_mod( 't_p_newer_posts' ); $t_p_newer_posts = wp_kses(( $t_p_newer_posts.' <span class="meta-nav">&rarr;</span>'), $xnews_allowed_html_array ); }
 
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
@@ -33,23 +33,23 @@ endif;
 $navigation_speed = "4.9";
 
 
-if ( ! function_exists( 'fullstory_entry_meta' ) ) {
+if ( ! function_exists( 'xnews_entry_meta' ) ) {
 /**
  * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
  *
  * Create your own _entry_meta() to override in a child theme.
  *
  */
-	function fullstory_entry_meta() {
-		$fullstory_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
-		if ( false == get_theme_mod( 't_p_view_all_posts_by', false ) ) { $t_p_view_all_posts_by = esc_html__("View all posts by %s", "fullstory");  } else { $t_p_view_all_posts_by = get_theme_mod( 't_p_view_all_posts_by' ); $t_p_view_all_posts_by = $t_p_view_all_posts_by.' %s'; }
-		if ( false == get_theme_mod( 't_p_posted_on', false ) ) { $t_p_posted_on = wp_kses(__( '<div class="mt-meta">Posted on <i class="fa fa-calendar"></i> %3$s </div>', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_p_posted_on = get_theme_mod( 't_p_posted_on' ); $t_p_posted_on = ' <div class="mt-meta">'.$t_p_posted_on.' <i class="fa fa-calendar"></i> %3$s </div>'; }
-		global $fullstory_allowed_html_array;
+	function xnews_entry_meta() {
+		$xnews_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
+		if ( false == get_theme_mod( 't_p_view_all_posts_by', false ) ) { $t_p_view_all_posts_by = esc_html__("View all posts by %s", "xnews");  } else { $t_p_view_all_posts_by = get_theme_mod( 't_p_view_all_posts_by' ); $t_p_view_all_posts_by = $t_p_view_all_posts_by.' %s'; }
+		if ( false == get_theme_mod( 't_p_posted_on', false ) ) { $t_p_posted_on = wp_kses(__( '<div class="mt-meta">Posted on <i class="fa fa-calendar"></i> %3$s </div>', 'xnews' ), $xnews_allowed_html_array );  } else { $t_p_posted_on = get_theme_mod( 't_p_posted_on' ); $t_p_posted_on = ' <div class="mt-meta">'.$t_p_posted_on.' <i class="fa fa-calendar"></i> %3$s </div>'; }
+		global $xnews_allowed_html_array;
 		// Translators: used between list items, there is a space after the comma.
-		$categories_list = get_the_category_list( esc_html__( ', ', 'fullstory' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'xnews' ) );
 
 		// Translators: used between list items, there is a space after the comma.
-		$tag_list = get_the_tag_list( '', esc_html__( ', ', 'fullstory' ) );
+		$tag_list = get_the_tag_list( '', esc_html__( ', ', 'xnews' ) );
 
 		$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s"> %4$s</time></a>',
 			esc_url( get_permalink() ),
@@ -66,9 +66,9 @@ if ( ! function_exists( 'fullstory_entry_meta' ) ) {
 
 		// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
 		if ( $tag_list ) {
-			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-tag"></i> %2$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'fullstory' ), $fullstory_allowed_html_array );
+			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-tag"></i> %2$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'xnews' ), $xnews_allowed_html_array );
 		} elseif ( $categories_list ) {
-			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'fullstory' ), $fullstory_allowed_html_array );
+			$utility_text = wp_kses(__( '<div class="mt-meta"><i class="fa fa-folder-open-o"></i> %1$s <span class="mt_space"></span> <i class="fa fa-calendar"></i> %3$s </div>', 'xnews' ), $xnews_allowed_html_array );
 		} else {
 			$utility_text = $t_p_posted_on;
 		}
@@ -83,15 +83,15 @@ if ( ! function_exists( 'fullstory_entry_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'fullstory_content_nav' ) ) {
+if ( ! function_exists( 'xnews_content_nav' ) ) {
 /**
  * Displays navigation to next/previous pages when applicable.
  *
  */
-	function fullstory_content_nav( $nav_id ) {
-		global $wp_query,  $fullstory_allowed_html_array;
-		if ( false == get_theme_mod( 't_p_older_posts', false ) ) { $t_p_older_posts = wp_kses(__( '<span class="meta-nav">&larr;</span> Older posts', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_p_older_posts = get_theme_mod( 't_p_older_posts' ); $t_p_older_posts = wp_kses(( '<span class="meta-nav">&larr;</span> '.$t_p_older_posts), $fullstory_allowed_html_array ); }
-		if ( false == get_theme_mod( 't_p_newer_posts', false ) ) { $t_p_newer_posts = wp_kses(__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'fullstory' ), $fullstory_allowed_html_array );  } else { $t_p_newer_posts = get_theme_mod( 't_p_newer_posts' ); $t_p_newer_posts = wp_kses(( $t_p_newer_posts.' <span class="meta-nav">&rarr;</span>'), $fullstory_allowed_html_array ); }
+	function xnews_content_nav( $nav_id ) {
+		global $wp_query,  $xnews_allowed_html_array;
+		if ( false == get_theme_mod( 't_p_older_posts', false ) ) { $t_p_older_posts = wp_kses(__( '<span class="meta-nav">&larr;</span> Older posts', 'xnews' ), $xnews_allowed_html_array );  } else { $t_p_older_posts = get_theme_mod( 't_p_older_posts' ); $t_p_older_posts = wp_kses(( '<span class="meta-nav">&larr;</span> '.$t_p_older_posts), $xnews_allowed_html_array ); }
+		if ( false == get_theme_mod( 't_p_newer_posts', false ) ) { $t_p_newer_posts = wp_kses(__( 'Newer posts <span class="meta-nav">&rarr;</span>', 'xnews' ), $xnews_allowed_html_array );  } else { $t_p_newer_posts = get_theme_mod( 't_p_newer_posts' ); $t_p_newer_posts = wp_kses(( $t_p_newer_posts.' <span class="meta-nav">&rarr;</span>'), $xnews_allowed_html_array ); }
 
 		if ( $wp_query->max_num_pages > 1 ) : ?>
 			<nav id="<?php echo esc_attr($nav_id); ?>" class="navigation" role="navigation">
@@ -117,7 +117,7 @@ global $wp_version; if (version_compare($wp_version, $navigation_speed, '>=')) {
  * @param string $sep Optional separator.
  * @return string Filtered title.
  */
-function fullstory_wp_title( $title, $sep ) {
+function xnews_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() )
@@ -130,31 +130,31 @@ function fullstory_wp_title( $title, $sep ) {
 	$site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
 		$title = "$title $sep $site_description";
-		if ( false == get_theme_mod( 't_p_page', false ) ) { $t_p_page = esc_html__("Page %s", "fullstory");  } else { $t_p_page = get_theme_mod( 't_p_page' ); $t_p_page = $t_p_page.' %s'; }
+		if ( false == get_theme_mod( 't_p_page', false ) ) { $t_p_page = esc_html__("Page %s", "xnews");  } else { $t_p_page = get_theme_mod( 't_p_page' ); $t_p_page = $t_p_page.' %s'; }
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
 		$title = "$title $sep " . sprintf( $t_p_page, max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'fullstory_wp_title', 10, 2 );
+add_filter( 'wp_title', 'xnews_wp_title', 10, 2 );
 
 
 /**
  * Makes our wp_nav_menu() fallback -- wp_page_menu() -- show a home link.
  *
  */
-function fullstory_page_menu_args( $args ) {
+function xnews_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'fullstory_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'xnews_page_menu_args' );
 
 /**
  * Enqueues scripts and styles for front-end.
  *
  */
-function fullstory_scripts_styles() {
+function xnews_scripts_styles() {
 	/*
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
@@ -164,7 +164,7 @@ function fullstory_scripts_styles() {
 
 
 }
-add_action( 'wp_enqueue_scripts', 'fullstory_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'xnews_scripts_styles' );
 
 
 ?>

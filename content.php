@@ -4,9 +4,9 @@
 /*-----------------------------------------------------------------------------------*/
 
 $image_settings = get_post_meta(get_the_ID(), "magazin_post_image", true);
-$options = get_option("fullstory_theme_options");
-if ( false == get_theme_mod( 't_p_pages', false ) ) { $t_p_pages = esc_html__("Pages:", "fullstory");  } else { $t_p_pages = get_theme_mod( 't_p_pages' ); }
-if ( false == get_theme_mod( 't_p_permalink_to', false ) ) { $t_p_permalink_to = esc_html__("Permalink to %s", "fullstory");  } else { $t_p_permalink_to = get_theme_mod( 't_p_permalink_to' ).' %s'; }
+$options = get_option("xnews_theme_options");
+if ( false == get_theme_mod( 't_p_pages', false ) ) { $t_p_pages = esc_html__("Pages:", "xnews");  } else { $t_p_pages = get_theme_mod( 't_p_pages' ); }
+if ( false == get_theme_mod( 't_p_permalink_to', false ) ) { $t_p_permalink_to = esc_html__("Permalink to %s", "xnews");  } else { $t_p_permalink_to = get_theme_mod( 't_p_permalink_to' ).' %s'; }
 
 if(is_single()) { $more = 1; }?>
 <article id="post-<?php the_ID(); ?>" class="<?php if ( is_sticky() and !is_single()){ ?> post_sticky <?php } ?>">

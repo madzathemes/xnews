@@ -1,4 +1,4 @@
-<?php function fullstory_single_media() {
+<?php function xnews_single_media() {
 
   $images = get_post_meta( get_the_ID(), 'magazin_post_gallery_images', 1 );
   $videos = get_post_meta(get_the_ID(), "magazin_video_url", true);
@@ -42,7 +42,7 @@
   				<div class="single-share">
             <a class="lightbox" href="<?php echo get_the_post_thumbnail_url(get_the_ID(),"large"); ?>">
               <?php $copyright = get_post_meta(get_the_ID(), "magazin_img_copyright", true); if(!empty($copyright)){ ?><span class="mt-img-copyright"><?php echo esc_attr($copyright); ?></span><?php } ?>
-              <?php echo get_the_post_thumbnail(get_the_ID(),"fullstory_810", array( 'class' => 'mt-radius')); ?>
+              <?php echo get_the_post_thumbnail(get_the_ID(),"xnews_810", array( 'class' => 'mt-radius')); ?>
             </a>
             <div class="single-share-socials mt-radius-b">
               <a href="http://www.facebook.com/sharer.php?u=<?php echo get_the_permalink(); ?>" target="_blank"><div class="facebook mt-radius-b"></div></a>
@@ -58,4 +58,4 @@
   <?php } ?>
 
 <?php } ?>
-<?php add_filter('fullstory_single_media','fullstory_single_media'); ?>
+<?php add_filter('xnews_single_media','xnews_single_media'); ?>

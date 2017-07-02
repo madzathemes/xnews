@@ -5,12 +5,12 @@
  */
 ?>
 <?php get_header();
-if ( false == get_theme_mod( 't_p_permalink_to', false ) ) { $t_p_permalink_to = esc_html__("Permalink to %s", "fullstory");  } else { $t_p_permalink_to = get_theme_mod( 't_p_permalink_to' ).' %s'; }
-if ( false == get_theme_mod( 't_p_sorry_search', false ) ) { $t_p_sorry_search = esc_html__("Sorry, but nothing matched your search criteria. Please try again with some different keywords.", "fullstory");  } else { $t_p_sorry_search = get_theme_mod( 't_p_sorry_search' ).' %s'; }
-if ( false == get_theme_mod( 't_p_nothing_found', false ) ) { $t_p_nothing_found = esc_html__("Nothing Found", "fullstory");  } else { $t_p_nothing_found = get_theme_mod( 't_p_nothing_found' ); }
+if ( false == get_theme_mod( 't_p_permalink_to', false ) ) { $t_p_permalink_to = esc_html__("Permalink to %s", "xnews");  } else { $t_p_permalink_to = get_theme_mod( 't_p_permalink_to' ).' %s'; }
+if ( false == get_theme_mod( 't_p_sorry_search', false ) ) { $t_p_sorry_search = esc_html__("Sorry, but nothing matched your search criteria. Please try again with some different keywords.", "xnews");  } else { $t_p_sorry_search = get_theme_mod( 't_p_sorry_search' ).' %s'; }
+if ( false == get_theme_mod( 't_p_nothing_found', false ) ) { $t_p_nothing_found = esc_html__("Nothing Found", "xnews");  } else { $t_p_nothing_found = get_theme_mod( 't_p_nothing_found' ); }
 ?>
 <div class="mt-container-wrap">
-	<?php fullstory_title(); ?>
+	<?php xnews_title(); ?>
 <div class="container mt-content-container">
 <div class="row">
 

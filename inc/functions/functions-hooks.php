@@ -1,10 +1,10 @@
 <?php
-function fullstory_css() {
+function xnews_css() {
 
-	wp_enqueue_style('fullstory-style', get_stylesheet_uri());
+	wp_enqueue_style('xnews-style', get_stylesheet_uri());
 
 	$custom_styles = '';
-	$options = get_option("fullstory_theme_options");
+	$options = get_option("xnews_theme_options");
 
 	$options_in = get_option("mt_colors_default");
 	if(!empty($options_in)){
@@ -334,18 +334,18 @@ function fullstory_css() {
 
 	 if ( $custom_styles != '' ) {
 	  $css = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $custom_styles);
-		wp_add_inline_style( 'fullstory-style', $css );
+		wp_add_inline_style( 'xnews-style', $css );
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'fullstory_css');
+add_action( 'wp_enqueue_scripts', 'xnews_css');
 
-function fullstory_header_script() {
+function xnews_header_script() {
 
-		$option = get_option("fullstory_theme_options");
+		$option = get_option("xnews_theme_options");
 
-		wp_enqueue_script( 'fullstory_script', get_template_directory_uri(). '/inc/js/scripts.js', array( 'jquery'), '', true );
-		wp_localize_script( 'fullstory_script', 'ajax_posts', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'noposts' => esc_html__('No older posts found', 'fullstory'), ));
+		wp_enqueue_script( 'xnews_script', get_template_directory_uri(). '/inc/js/scripts.js', array( 'jquery'), '', true );
+		wp_localize_script( 'xnews_script', 'ajax_posts', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'noposts' => esc_html__('No older posts found', 'xnews'), ));
 
 		// Third party scripts/ styles don't need to be prefixed to avoid double loading
 		wp_enqueue_script('jquery-html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
@@ -354,7 +354,7 @@ function fullstory_header_script() {
 		wp_script_add_data( 'jquery-respondmin', 'conditional', 'lt IE 9' );
 
 
-    function fullstory_fonts_url() {
+    function xnews_fonts_url() {
 
       $theme_font = "Lato:400,900,700";
 
@@ -362,29 +362,29 @@ function fullstory_header_script() {
         Translators: If there are characters in your language that are not supported
         by chosen font(s), translate this to 'off'. Do not translate into your own language.
          */
-        if ( 'off' !== _x( 'on', 'Google font: on or off', 'fullstory' ) ) {
+        if ( 'off' !== _x( 'on', 'Google font: on or off', 'xnews' ) ) {
             $font_url = add_query_arg( 'family', urlencode( ''. esc_attr($theme_font) .'' ), "//fonts.googleapis.com/css" );
         }
         return $font_url;
     }
-    wp_enqueue_style( 'fullstory-fonts', fullstory_fonts_url(), array(), '1.0.0' );
+    wp_enqueue_style( 'xnews-fonts', xnews_fonts_url(), array(), '1.0.0' );
 
 
 }
-add_action('wp_enqueue_scripts', 'fullstory_header_script');
+add_action('wp_enqueue_scripts', 'xnews_header_script');
 
-function fullstory_admin_script() {
-	wp_enqueue_style('fullstory-admin', get_template_directory_uri().'/inc/css/admin.css');
+function xnews_admin_script() {
+	wp_enqueue_style('xnews-admin', get_template_directory_uri().'/inc/css/admin.css');
 }
-add_action('admin_enqueue_scripts', 'fullstory_admin_script');
+add_action('admin_enqueue_scripts', 'xnews_admin_script');
 
 
-add_filter('body_class','fullstory_class');
-function fullstory_class($classes) {
+add_filter('body_class','xnews_class');
+function xnews_class($classes) {
 
 	$body_class = "";
 
-	$options = get_option("fullstory_theme_options");
+	$options = get_option("xnews_theme_options");
 
 	if(!empty( $options['mt_menu_fix'])){
 		if( $options['mt_menu_fix']=="1") {

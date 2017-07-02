@@ -1,8 +1,8 @@
-<?php function fullstory_header() {
-if ( false == get_theme_mod( 't_o_followers', false ) ) { $t_o_followers = esc_html__("Followers", "fullstory");  } else { $t_o_followers = get_theme_mod( 't_o_followers' ); }
-if ( false == get_theme_mod( 't_p_to_search', false ) ) { $t_p_to_search = esc_html__("To search type and hit enter", "fullstory");  } else { $t_p_to_search = get_theme_mod( 't_p_to_search' ); }
+<?php function xnews_header() {
+if ( false == get_theme_mod( 't_o_followers', false ) ) { $t_o_followers = esc_html__("Followers", "xnews");  } else { $t_o_followers = get_theme_mod( 't_o_followers' ); }
+if ( false == get_theme_mod( 't_p_to_search', false ) ) { $t_p_to_search = esc_html__("To search type and hit enter", "xnews");  } else { $t_p_to_search = get_theme_mod( 't_p_to_search' ); }
 $allowed_html = array('ins' => array( 'class' => array(), 'style' => array(),'data-ad-client' => array(),'data-ad-slot' => array(),'data-ad-format' => array()), 'iframe' => array( 'id' => array(),'name' => array(),'src' => array(),'style' => array(),'scrolling' => array(),'frameborder' => array()), 'script' => array( 'async' => array(), 'type' => array(),'src' => array()), 'noscript' => array(), 'small' => array( 'class' => array()), 'img' => array( 'src' => array(), 'alt' => array(), 'class' => array(), 'width' => array(), 'height' => array() ), 'a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
-$option = get_option("fullstory_theme_options");
+$option = get_option("xnews_theme_options");
 $optioz = get_option("magazin_theme_options");
 $page_option = get_post_meta(get_the_ID(), "magazin_menu_background_width", true);
 if(!empty($page_option)) {
@@ -37,7 +37,7 @@ else if(!empty($option['menu_background_width'])) {
 					<div class="col-md-12">
 						<div class="head container-fluid">
 							<div class="pull-left mt-top-social">
-								<?php fullstory_socials(); ?>
+								<?php xnews_socials(); ?>
 							</div>
 							<?php if ( true == get_theme_mod( 'mt_top_follower', true ) ) { ?>
 							<div class="mt-top-followers pull-left mt-top-share">
@@ -45,7 +45,7 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 							<?php } ?>
 							<div class="pull-right mt-top-menu">
-								<?php fullstory_top_menu(); ?>
+								<?php xnews_top_menu(); ?>
 							</div>
 						</div>
 					</div>
@@ -68,10 +68,10 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 						</div>
 
-						<div class="head-logo" <?php if(!empty($option['logo_width'])) { ?>  style="width:<?php echo esc_attr($option['logo_width']); ?>px" <?php } ?>><?php fullstory_logo(); ?></div>
+						<div class="head-logo" <?php if(!empty($option['logo_width'])) { ?>  style="width:<?php echo esc_attr($option['logo_width']); ?>px" <?php } ?>><?php xnews_logo(); ?></div>
 
 						<div class="nav mt-radius" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" >
-							<?php fullstory_nav(); ?>
+							<?php xnews_nav(); ?>
 						</div>
 
 
@@ -87,14 +87,14 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 							<div class="search-close"></div>
 						<?php } ?>
-							<?php fullstory_socials(); ?>
+							<?php xnews_socials(); ?>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php	if ( true == get_theme_mod( 'mt_menu_share', true ) ) { fullstory_header_fixed();	} ?>
+	<?php	if ( true == get_theme_mod( 'mt_menu_share', true ) ) { xnews_header_fixed();	} ?>
 </div>
 <div class="header-wrap-space"></div>
 <?php if  (!empty($optioz['header_ad_top'])) {  ?>
@@ -104,28 +104,28 @@ else if(!empty($option['menu_background_width'])) {
 		</div>
 	</div>
 <?php } ?>
-<?php } add_filter('fullstory_header','fullstory_header');
+<?php } add_filter('xnews_header','xnews_header');
 
 
-function fullstory_top_content() { $option = get_option("fullstory_theme_options"); ?>
+function xnews_top_content() { $option = get_option("xnews_theme_options"); ?>
 		<div class="head-nav">
-			<?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php esc_html_e( 'LATEST', 'fullstory' ); ?> <span><?php esc_html_e( 'Posts', 'fullstory' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php esc_html_e( 'POPULAR', 'fullstory' ); ?> <span><?php esc_html_e( 'Posts', 'fullstory' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'fullstory' ); ?> <span><?php esc_html_e( 'Posts', 'fullstory' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'fullstory' ); ?> <span><?php esc_html_e( 'Posts', 'fullstory' ); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php esc_html_e( 'LATEST', 'xnews' ); ?> <span><?php esc_html_e( 'Posts', 'xnews' ); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php esc_html_e( 'POPULAR', 'xnews' ); ?> <span><?php esc_html_e( 'Posts', 'xnews' ); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'xnews' ); ?> <span><?php esc_html_e( 'Posts', 'xnews' ); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'xnews' ); ?> <span><?php esc_html_e( 'Posts', 'xnews' ); ?></span></a><?php } ?>
 		</div>
 
 		<?php if(!empty($option['header_link_url'])) { ?>
 				<div class="head-bookmark">
-					<a class="mt-radius" href="<?php echo esc_url($option['header_link_url']);  ?>" <?php if(!empty($option['header_link_blank'])) { if($option['header_link_blank']=="1") {?>target="_blank" <?php }} ?>><?php echo esc_attr(get_theme_mod('fullstory_header_link_name', 'Add Post')); ?></a>
+					<a class="mt-radius" href="<?php echo esc_url($option['header_link_url']);  ?>" <?php if(!empty($option['header_link_blank'])) { if($option['header_link_blank']=="1") {?>target="_blank" <?php }} ?>><?php echo esc_attr(get_theme_mod('xnews_header_link_name', 'Add Post')); ?></a>
 				</div>
 		<?php } ?>
 <?php }
-add_filter('fullstory_top_content','fullstory_top_content');
+add_filter('xnews_top_content','xnews_top_content');
 
-function fullstory_logo() {
+function xnews_logo() {
 
-	$option = get_option("fullstory_theme_options");
+	$option = get_option("xnews_theme_options");
 
 	// Fix for SSL
 	if(!empty($option['header_logo'])) {
@@ -154,11 +154,11 @@ function fullstory_logo() {
 	<?php }
 }
 
-add_filter('fullstory_logo','fullstory_logo');
+add_filter('xnews_logo','xnews_logo');
 
-function fullstory_logo_mobile() {
+function xnews_logo_mobile() {
 
-	$option = get_option("fullstory_theme_options"); ?>
+	$option = get_option("xnews_theme_options"); ?>
 
 	<?php if(!empty($option['mobile_logo'])) { ?>
 		<a href="<?php echo esc_url(home_url('/'));?>">
@@ -170,35 +170,35 @@ function fullstory_logo_mobile() {
 		</a>
 	<?php }
 }
-add_filter('fullstory_logo_mobile','fullstory_logo_mobile');
+add_filter('xnews_logo_mobile','xnews_logo_mobile');
 
-function fullstory_nav() {
+function xnews_nav() {
 	if(class_exists('md_walker__')) {
 		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu', 'walker'	=> new md_walker, 'echo' => true, 'depth' => 3, 'fallback_cb' => false));
 	} else {
 		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu', 'echo' => true, 'depth' => 3));
 	}
 }
-add_filter('fullstory_nav','fullstory_nav');
+add_filter('xnews_nav','xnews_nav');
 
-function fullstory_nav_fixed() {
+function xnews_nav_fixed() {
 	wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'fixed-menu-ul',  'echo' => true, 'depth' => 1));
 }
-add_filter('fullstory_nav_fixed','fullstory_nav_fixed');
+add_filter('xnews_nav_fixed','xnews_nav_fixed');
 
-function fullstory_nav_mobile() {
+function xnews_nav_mobile() {
 	wp_nav_menu( array('theme_location'=>"mobile",  'menu_class' => 'mobile',  'echo' => true, 'depth' => 2));
 }
-add_filter('fullstory_nav_mobile','fullstory_nav_mobile');
+add_filter('xnews_nav_mobile','xnews_nav_mobile');
 
-function fullstory_top_menu() {
+function xnews_top_menu() {
 	wp_nav_menu( array('theme_location'=>"top_menu",  'menu_class' => 'top-menu',  'echo' => true, 'depth' => 1));
 }
-add_filter('fullstory_top_menu','fullstory_top_menu');
+add_filter('xnews_top_menu','xnews_top_menu');
 
-function fullstory_socials() { ?>
+function xnews_socials() { ?>
 	<ul class="social"> <?php
-			$option = get_option("fullstory_theme_options");
+			$option = get_option("xnews_theme_options");
 			if(!empty($option['mt_icon_twitter'])) {?><li><a <?php if(!empty($option['mt_icon_blank'])) { if($option['mt_icon_blank']=="on") {?> target="_blank" <?php }} ?> href="<?php echo esc_url($option['mt_icon_twitter']); ?>"><i class="ic-twitter"></i></a></li><?php }
 			if(!empty($option['mt_icon_facebook'])) {?><li><a <?php  if(!empty($option['mt_icon_blank'])) { if($option['mt_icon_blank']=="on") {?> target="_blank" <?php }} ?> href="<?php echo esc_url($option['mt_icon_facebook']); ?>" ><i class="ic-facebook"></i></a></li><?php }
 			if(!empty($option['mt_icon_intagram'])) {?><li><a <?php if(!empty($option['mt_icon_blank'])) {  if($option['mt_icon_blank']=="on") {?> target="_blank" <?php }} ?> href="<?php echo esc_url($option['mt_icon_intagram']); ?>" ><i class="ic-instagram"></i></a></li><?php }
@@ -212,9 +212,9 @@ function fullstory_socials() { ?>
 			if(!empty($option['mt_icon_rss'])) {?><li><a <?php  if(!empty($option['mt_icon_blank'])) { if($option['mt_icon_blank']=="on") {?> target="_blank" <?php }} ?> href="<?php echo esc_url($option['mt_icon_rss']); ?>"><i class="ic-rss"></i></a></li><?php }
 			?>
 	</ul><?php
-} add_filter('fullstory_socials','fullstory_socials');
+} add_filter('xnews_socials','xnews_socials');
 
-function fullstory_header_fixed() {
+function xnews_header_fixed() {
 	if (is_single()) {
 		/* Share Meta from Magazin framework */
 		$share = get_post_meta(get_the_ID(), "magazin_share_count", true);
@@ -230,10 +230,10 @@ function fullstory_header_fixed() {
 			$viewes = $view;
 		}
 		$url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
-		if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "fullstory");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); }
-	 	if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "fullstory");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); }
+		if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "xnews");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); }
+	 	if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "xnews");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); }
 		?>
-		<?php $option = get_option("fullstory_theme_options"); ?>
+		<?php $option = get_option("xnews_theme_options"); ?>
 				<div class="fixed-top">
 					<div class="container-fuild">
 						<div class="row">
@@ -254,4 +254,4 @@ function fullstory_header_fixed() {
 					</div>
 				</div>
 	<?php } ?>
-<?php } add_filter('fullstory_header_fixed','fullstory_header_fixed'); ?>
+<?php } add_filter('xnews_header_fixed','xnews_header_fixed'); ?>
