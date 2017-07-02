@@ -612,7 +612,7 @@ blockquote p {
 blockquote:before {
   font-size: 16px !important;
   font-family: "madza";
-  content: "\e90e";
+  content: "\e913";
   position: absolute;
   left: 0px;
   margin-left: -11px;
@@ -624,7 +624,7 @@ blockquote:before {
 blockquote:after {
   font-size: 16px !important;
   font-family: "madza";
-  content: "\e90e";
+  content: "\e913";
   position: absolute;
   right: 0px;
   margin-left: -11px;
