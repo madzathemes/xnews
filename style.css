@@ -52,7 +52,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover,
 .poster-carousel-trending .poster-prev:hover,
 .poster-carousel-trending .poster-next:hover,
 .mt-review a:hover {
-  background: #ff0036;
+  background: #ff6c00;
   color: #fff
 }
 .mt-theme-text,
@@ -60,7 +60,7 @@ a:hover,
 .nav-single .next div:after,
 .nav-single .previous div:before,
 .stat-views:before {
-  color: #ff0036;
+  color: #ff6c00;
 }
 
 .mt-menu-full .header-menu > .container { width: 100%;  }
@@ -1073,7 +1073,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   top: 70%;
   position: absolute;
   z-index: -1;
-  background: #ff0036;
+  background: #ff6c00;
 }
 .sf-menu > li.current_page_item > a::before,
 .sf-menu > li.current_page_parent > a::before,
@@ -1190,7 +1190,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   margin-top: -9px;
   font-size: 16px;
   left: 0px;
-  color: #ff0036;
+  color: #ff6c00;
 }
 
 
@@ -1209,7 +1209,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt_l_hot:before {
   content: "\e9a9";
-  color: #ff0036;
+  color: #ff6c00;
 }
 .mt_l_popular:before {
   content: "\e9d9";
@@ -1798,7 +1798,7 @@ h2.heading span {
 }
 .poster-image:hover .poster-cat span,
 .poster.large:hover .poster-large-cat span {
-  background: #ff0036;
+  background: #ff6c00;
 }
 .poster.trending-normal .poster-image {
   width: 100%;
@@ -2574,7 +2574,7 @@ opacity: 0.7
   opacity:1;
 }
 .grid-post:hover .poster-cat span {
-  background:#ff0036
+  background:#ff6c00
 }
 .grid-post.style-3 {
   width: 32.8%;;
@@ -2811,7 +2811,7 @@ opacity: 0.7
   padding: 3px 5px;
   color: white;
   font-size: 11px;
-  background: #ff0036;
+  background: #ff6c00;
   border: 0px solid silver!important;
 }
 .single-media-title .color-silver-light,
@@ -5555,7 +5555,7 @@ li.mtc-buy {
   height: 100%;
 }
 .mt-slide-1-title:hover .mt-slide-1-cat {
-  background: #ff0036;
+  background: #ff6c00;
 }
 
 
@@ -5749,7 +5749,7 @@ li.mtc-buy {
   color: black!important;
 }
 .nave.df-megamenu-nav-sub .active a.mt-sub-cat-a {
-  background: #ff0036!important;
+  background: #ff6c00!important;
   color: white!important;
 }
 .df-is-megamenu .df-megamenu-nav-sub li {
