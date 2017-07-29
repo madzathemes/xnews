@@ -87,7 +87,7 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 							<div class="search-close"></div>
 						<?php } ?>
-							<?php xnews_socials(); ?>
+							
 						</div>
 					</div>
 				</div>
