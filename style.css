@@ -1470,10 +1470,10 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-fixed-up.nav-down.fixed-on .fixed-top,
 .mt-fixed-always.fixed-on .fixed-top  {
-  transform: translate(0,130px);
-  -webkit-transform: translate(0,130px); /** Safari & Chrome **/
-  -o-transform: translate(0,130px); /** Opera **/
-  -moz-transform: translate(0,130px); /** Firefox **/
+  transform: translate(0,0px);
+  -webkit-transform: translate(0,0px); /** Safari & Chrome **/
+  -o-transform: translate(0,0px); /** Opera **/
+  -moz-transform: translate(0,0px); /** Firefox **/
 }
 .fixed-top .share  {
   margin-bottom: 0px;
@@ -5567,6 +5567,9 @@ li.mtc-buy {
 .mt-head-date {
   text-transform: uppercase;
   font-weight: bold;
+  background: #222;
+  color: white;
+  padding: 1px 3px;
 }
 .mt-head-text {
   font-size: 16px;
