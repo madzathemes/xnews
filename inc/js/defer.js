@@ -1,12 +1,17 @@
 // Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 20;
 var windowsz = jQuery(window);
 var bodyz = jQuery('body');
 windowsz.scroll(function(event){
     didScroll = true;
 
 });
+windowsz.scroll(function(event){
+    didScroll = true;
 
-
+});
 function repeatOften() {
     if (didScroll) {
         hasScrolled();
