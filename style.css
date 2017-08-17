@@ -120,7 +120,8 @@ h4,
 .nav-button .mt-m-cool-button-line:after,
 .nav-button .mt-m-cool-button-line:before,
 .nav-button .mt-m-cool-button-line,
-.poster i{
+.poster i,
+.single-content .entry-content p a{
   -webkit-transition: all 200ms ease-in-out!important;
   -moz-transition: all 200ms ease-in-out!important;
   -ms-transition: all 200ms ease-in-out!important;
@@ -2714,6 +2715,13 @@ opacity: 0.7
 }
 
 /* SINGLE */
+.single-content .entry-content p a {
+    box-shadow: inset 0 -3px 0 #ff6c00;
+}
+.single-content .entry-content p a:hover {
+    background: #ff6c00;
+    color: white
+}
 .single-media-top {
   position: relative;
   overflow: hidden;
