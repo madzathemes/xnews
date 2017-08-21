@@ -2879,6 +2879,7 @@ opacity: 0.7
   padding: 2px 10px;
   font-weight: 700;
   background: none;
+  margin:  0 5px 0 5px;
   color: black;
 }
 .single-cat-wrap .post-categories li a:before {
