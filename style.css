@@ -1253,7 +1253,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   vertical-align: middle;
 }
 .top-nav a {
-  color: #fff!important;
+  color: #ccc!important;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
@@ -1433,7 +1433,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   height: 89px;
 }
 .header-menu {
-  background: #1e1e1f;
+  background: rgb(64, 66, 76);
 }
 .fixed-top {
   -webkit-backface-visibility: hidden;
@@ -1508,7 +1508,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   position: absolute;
   margin-top: 16px;
   font-size: 16px;
-  color: white;
+  color: #717171;
   right: 0px;
 }
 .nav-search-input:before {
