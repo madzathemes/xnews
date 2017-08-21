@@ -3289,7 +3289,7 @@ opacity: 0.7
   display: inline-block;
 }
 .single-format-standard .single-share > a {
-  display: inline-block;
+  display: block;
 }
 .post-style-4 .single-share,
 .post-style-4 .single-share > a,
