@@ -348,7 +348,7 @@ img {
 	vertical-align: middle;
 }
 h1,h2,h3,h4,h5,h6 {
-  color: #000113;
+  color: #40424c;
   margin: 0px;
   padding: 20px 0px 20px;
 }
@@ -604,12 +604,13 @@ blockquote {
   margin: 20px 0px 40px;
   position: relative;
   padding: 0 0 0 20px;
-  border-left: 5px solid black;
+  border-left: 5px solid #40424c;
 }
 blockquote p {
   font-size: 21px !important;
   font-weight: 900;
   line-height: 1.4;
+  color: #40424c;
   padding-bottom: 0px;
 }
 .sticky {}
@@ -1044,6 +1045,12 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 	-webkit-transition: none;
 	transition: none;
 }
+.sf-menu > li.current_page_item > a,
+.sf-menu > li.current_page_parent > a,
+.sf-menu > li > a {
+  color: white;
+}
+
 .sf-menu > li.current_page_item > a::before,
 .sf-menu > li.current_page_parent > a::before,
 .sf-menu > li > a::before {
