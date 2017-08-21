@@ -604,6 +604,7 @@ blockquote {
   margin: 40px 0px 40px;
   position: relative;
   padding: 0 0 0 20px;
+  border-left: 5px solid black;
 }
 blockquote p {
   font-size: 21px !important;
