@@ -2538,7 +2538,8 @@ opacity: 0.7
   float:left;
   overflow: hidden;
   position: relative;
-  background:
+  background: #f5f5f5;
+  border-radius: 4px;
 }
 .grid-post {
   width: 49.6%;
@@ -5603,7 +5604,7 @@ li.mtc-buy {
 /* mt Head */
 .mt-head {
   padding: 30px 0px 31px;
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
 }
 .mt-head-title,
@@ -5613,7 +5614,8 @@ li.mtc-buy {
   font-weight: bold;
   background: #40424c;
   color: white;
-  padding: 1px 3px;
+  padding: 2px 5px;
+  border-radius: 4px;
 }
 .mt-head-text {
   font-size: 16px;
