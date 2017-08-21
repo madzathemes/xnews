@@ -7,7 +7,7 @@
           <div><?php xnews_single_count(); ?></div>
           <?php the_content(); ?></div>
 
-          <?php xnews_single_bottom_after(); ?>
+          <?php xnews_single_bottom(); ?>
       </div>
     </div>
 
