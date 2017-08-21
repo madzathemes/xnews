@@ -1885,6 +1885,7 @@ h2.heading span {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  border-radius: 4px;
 }
 .poster-info {
   position: absolute;
