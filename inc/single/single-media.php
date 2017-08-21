@@ -44,13 +44,6 @@
               <?php $copyright = get_post_meta(get_the_ID(), "magazin_img_copyright", true); if(!empty($copyright)){ ?><span class="mt-img-copyright"><?php echo esc_attr($copyright); ?></span><?php } ?>
               <?php echo get_the_post_thumbnail(get_the_ID(),"xnews_810", array( 'class' => 'mt-radius')); ?>
             <?php if ( shortcode_exists( 'posts_trending' ) ) { ?></a><?php } ?>
-            <div class="single-share-socials mt-radius-b">
-              <a href="http://www.facebook.com/sharer.php?u=<?php echo get_the_permalink(); ?>" target="_blank"><div class="facebook mt-radius-b"></div></a>
-              <?php $input = get_the_title().' '.get_the_permalink(); $title = str_replace( ' ', '+', $input ); ?>
-              <a href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><div class="twiiter mt-radius-b"></div></a>
-              <a href="https://plus.google.com/share?url=<?php echo get_the_permalink(); ?>" target="_blank"><div class="google mt-radius-b"></div></a>
-              <a href="http://pinterest.com/pin/create/button/?url=<?php echo get_the_permalink(); ?>&media=<?php echo esc_url($url); ?>" target="_blank"><div class="pinterest mt-radius-b"></div></a>
-            </div>
           </div>
 			</div>
 		<?php } ?>
