@@ -1046,7 +1046,8 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 	transition: none;
 }
 .sf-menu > li.current_page_item > a,
-.sf-menu > li.current_page_parent > a {
+.sf-menu > li.current_page_parent > a,
+.sf-menu > li > a:hover {
   color: white!important;
 }
 
