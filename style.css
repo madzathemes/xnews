@@ -2721,6 +2721,10 @@ opacity: 0.7
 .mt-single-02 .share li a {
   height: 45px;
   padding: 7px 12px 6px 33px;
+}
+.mt-single-02 .share li a,
+.mt-single-02 .share-more-wrap .share-more-icon,
+.mt-single-02 .share-more :before {
   border-radius: 100%;
 }
 .mt-single-02 .share li a::before {
