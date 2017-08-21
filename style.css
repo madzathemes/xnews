@@ -2879,8 +2879,17 @@ opacity: 0.7
   padding: 2px 10px;
   font-weight: 700;
   background: none;
-  border-left: 10px #ff6c00 solid;
   color: black;
+}
+.single-cat-wrap .post-categories li a:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: orange;
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  border-radius: 100%;
 }
 .col-col-1 .single-cat-wrap .post-categories {
   margin-bottom: 20px;
