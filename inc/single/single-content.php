@@ -26,7 +26,7 @@ $share_bottom = get_post_meta(get_the_ID(), "magazin_post_share_bottom", true);
 </div>
 <?php $review = get_post_meta(get_the_ID(), "magazin_review_location", true); if($review==""){ if(function_exists("mt_review_title")) { echo mt_review_single(); }} ?>
   <div class="tags"><?php echo get_the_tag_list('#', '#'); ?></div>
-  <?php  if(function_exists("mt_share_bottom")) { mt_share_bottom(); } ?>
+  <?php  if(function_exists("mt_share_bottom_")) { mt_share_bottom(); } ?>
   <div class="clearfix"></div>
   <div class="entry-meta">
 
