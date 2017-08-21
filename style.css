@@ -601,35 +601,15 @@ iframe {
 blockquote {
   font-size: 21px !important;
   font-weight: 800;
-  margin: 40px 40px 40px;
-  text-align: center;
+  margin: 40px 0px 40px;
   position: relative;
+  padding: 0 0 0 20px;
 }
 blockquote p {
   font-size: 21px !important;
   font-weight: 900;
   line-height: 1.4;
-}
-blockquote:before {
-  font-size: 16px !important;
-  font-family: "madza";
-  content: "\e913";
-  position: absolute;
-  left: 0px;
-  margin-left: -11px;
-  top: -20px;
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-blockquote:after {
-  font-size: 16px !important;
-  font-family: "madza";
-  content: "\e913";
-  position: absolute;
-  right: 0px;
-  margin-left: -11px;
-  bottom: 0px;
+  padding-bottom: 0px;
 }
 .sticky {}
 .entry-content ul,
