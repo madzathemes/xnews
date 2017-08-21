@@ -4,7 +4,10 @@
       <div class="row">
         <div class="col-md-1 mt-signle-share-sidebar"><?php xnews_single_share(); ?></div>
         <div class="entry-content col-md-11" itemprop="mainContentOfPage">
-          <div><?php xnews_single_count(); ?></div><?php the_content(); ?></div>
+          <div><?php xnews_single_count(); ?></div>
+          <?php the_content(); ?></div>
+
+          <?php xnews_single_bottom_after(); ?>
       </div>
     </div>
 

@@ -93,10 +93,14 @@ $share_bottom = get_post_meta(get_the_ID(), "magazin_post_share_bottom", true);
 
   if ( comments_open() || '0' != get_comments_number() ) comments_template( '', true );
 
-  if ( is_active_sidebar( 'sidebar-single-bottom-widget-area-after' ) ) {
 
-    dynamic_sidebar( 'sidebar-single-bottom-widget-area-after' );
+ }
 
-  }
+function xnews_single_bottom_after() {
+ if ( is_active_sidebar( 'sidebar-single-bottom-widget-area-after' ) ) {
 
- } ?>
+   dynamic_sidebar( 'sidebar-single-bottom-widget-area-after' );
+
+ }
+}
+ ?>
