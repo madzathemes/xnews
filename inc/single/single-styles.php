@@ -37,7 +37,7 @@
         <?php xnews_single_media(); ?>
         <?php xnews_single_cat(); ?>
         <?php xnews_single_title(); ?>
-        <?php xnews_single_social(); ?>
+        <?php xnews_single_share(); ?>
         <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php xnews_single_bottom(); ?>
       </div>
@@ -56,7 +56,7 @@
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
         <?php xnews_single_cat(); ?>
         <?php xnews_single_title(); ?>
-        <?php xnews_single_social(); ?>
+        <?php xnews_single_share(); ?>
         <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php xnews_single_bottom(); ?>
       </div>
@@ -82,7 +82,7 @@
     <div class="row">
 
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-        <?php xnews_single_social(); ?>
+        <?php xnews_single_share(); ?>
         <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php xnews_single_bottom(); ?>
       </div>
@@ -111,7 +111,7 @@
 
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
-        <?php xnews_single_social(); ?>
+        <?php xnews_single_share(); ?>
         <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php xnews_single_bottom(); ?>
       </div>
@@ -148,7 +148,7 @@
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
-          <?php xnews_single_social(); ?>
+          <?php xnews_single_share(); ?>
 
         <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php xnews_single_bottom(); ?>
@@ -190,7 +190,7 @@
     <div class="container">
       <div class="row">
         <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-          <?php xnews_single_social(); ?>
+          <?php xnews_single_share(); ?>
           <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
           <?php xnews_single_bottom(); ?>
         </div>
@@ -222,7 +222,7 @@
   <div class="container">
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-        <?php xnews_single_social(); ?>
+        <?php xnews_single_share(); ?>
         <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
         <?php xnews_single_bottom(); ?>
       </div>
@@ -243,7 +243,7 @@
 		      <?php xnews_single_title(); ?>
 				</div>
 				<div class="col-md-12">
-				  <?php xnews_single_social(); ?>
+				  <?php xnews_single_share(); ?>
 				</div>
 			</div>
 		</div>
