@@ -5291,10 +5291,11 @@ li.mtc-buy {
   padding: 10px 20px;
   font-size: 12px;
   text-transform: uppercase;
-  background: #1e1e1f;
+  background: #40424c;
   color: white;
   font-weight: 700;
   margin-bottom: 0px !important;
+  border-radius: 4px;
 }
 .mt-readmore-url:hover {
   background: #ebedf3;
