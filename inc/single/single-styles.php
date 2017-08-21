@@ -15,9 +15,7 @@
         <div class="row">
           <div class="col-md-12">
             <?php xnews_single_media(); ?>
-
-              <?php xnews_single_social(); ?>
-            <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
+            <?php xnews_single_content_frame(); ?>
             <?php xnews_single_bottom(); ?>
           </div>
         </div>

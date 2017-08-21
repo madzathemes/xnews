@@ -30,6 +30,7 @@ require get_template_directory() .'/inc/single/single-heads.php';
 require get_template_directory() .'/inc/single/single-media.php';
 require get_template_directory() .'/inc/single/single-sidebar.php';
 require get_template_directory() .'/inc/single/single-content.php';
+require get_template_directory() .'/inc/single/single-content-frame.php';
 require get_template_directory() .'/inc/single/single-styles.php';
 
 /*-----------------------------------------------------------------------------------*/

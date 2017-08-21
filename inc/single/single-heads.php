@@ -20,7 +20,7 @@
           }
   } ?>
 <?php } ?>
-<?php function xnews_single_social() {
+<?php function xnews_single_count() {
 $share_top = "";
 $share_top = get_post_meta(get_the_ID(), "magazin_post_share_top", true);
 
@@ -81,8 +81,12 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
       <?php if (get_comments_number()!="0") { ?><span class="stat-comments"><?php echo get_comments_number(); ?> <?php echo esc_html($t_c_comments); ?></span><?php } ?>
     </div>
     <?php } ?>
-    <?php if(function_exists("mt_share_top")) { mt_share_top(); } ?>
     <div class="clearfix"></div>
   </div>
-<?php $review = get_post_meta(get_the_ID(), "magazin_review_location", true); if($review=="before"){ if(function_exists("mt_review_title")) { echo mt_review_single(); }} ?>
+<?php } ?>
+<?php function xnews_single_share() { ?>
+  <div class="mt-single-share-btn">
+    <?php if(function_exists("mt_share_top")) { mt_share_top(); } ?>
+  </div>
+
 <?php } ?>
