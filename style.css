@@ -601,7 +601,7 @@ iframe {
 blockquote {
   font-size: 21px !important;
   font-weight: 800;
-  margin: 40px 0px 40px;
+  margin: 20px 0px 40px;
   position: relative;
   padding: 0 0 0 20px;
   border-left: 5px solid black;
