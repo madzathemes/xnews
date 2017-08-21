@@ -7,7 +7,9 @@
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>" >
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-11">
             <?php xnews_single_cat(); ?>
             <?php xnews_single_title(); ?>
           </div>
