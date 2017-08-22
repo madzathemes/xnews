@@ -18,7 +18,7 @@
           <div class="col-md-12">
             <?php xnews_single_media(); ?>
             <?php xnews_single_content_frame(); ?>
-            <?php xnews_single_bottom(); ?>
+            <?php xnews_single_bottom_after(); ?>
           </div>
         </div>
       </div>
