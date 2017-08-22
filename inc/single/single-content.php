@@ -96,7 +96,6 @@ $share_bottom = get_post_meta(get_the_ID(), "magazin_post_share_bottom", true);
 
  }
 
-
 function xnews_single_bottom_after() {
  if ( is_active_sidebar( 'sidebar-single-bottom-widget-area-after' ) ) {
 
