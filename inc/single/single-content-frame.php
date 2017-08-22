@@ -7,7 +7,7 @@
           <div><?php xnews_single_count(); ?></div>
           <?php $optionz = get_option("magazin_theme_options");
           if (!empty($optionz['article_ad_top'])) {  ?>
-            <div class="advertise text-center">
+            <div class="advertise">
               <?php echo do_shortcode(html_entity_decode($optionz['article_ad_top'])); ?>
             </div>
           <?php } ?>
