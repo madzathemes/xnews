@@ -1908,7 +1908,8 @@ h2.heading span {
   font-weight: bold;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  padding: 3px 6px
+  padding: 3px 6px;
+  border-radius: 4px; 
 }
 .poster-data {
   padding: 0;
