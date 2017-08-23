@@ -49,7 +49,8 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
         <?php global $post; echo get_avatar( $post->post_author, 26 ); ?>
       </div>
       <div class="author-info">
-        <div class="mt-author-soc hidden">
+        <strong><?php the_author_posts_link(); ?></strong>
+        <div class="mt-author-soc inline-block">
           <?php $twitterHandle = get_the_author_meta('twitter');
           $facebookHandle = get_the_author_meta('facebook');
           $googleHandle = get_the_author_meta('gplus');
@@ -67,7 +68,6 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
           <?php if(!empty($youtubeHandle)) { ?><a class="mt-bio-youtube" href="<?php echo esc_url($youtubeHandle); ?>"></a> <?php } ?>
           <?php if(!empty($dribbbleHandle)) { ?><a class="mt-bio-dribbble" href="<?php echo esc_url($dribbbleHandle); ?>"></a> <?php } ?>
         </div>
-        <strong><?php the_author_posts_link(); ?></strong>
         <small class="color-silver-light"><?php echo get_the_date(); ?></small>
       </div>
     </div>

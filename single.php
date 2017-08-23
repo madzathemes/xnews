@@ -30,7 +30,6 @@ if ($carousel == "yes"){ ?>
 	}
 }
 ?>
-
 <article itemscope itemtype="http://schema.org/Article">
 
 <?php while ( have_posts() ) : the_post();
