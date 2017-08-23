@@ -4010,7 +4010,8 @@ body.blog article {
   .poster.trending-carousel {
     width: 670px;
   }
-  .top-ad {
+  .top-ad,
+  .mt-signle-share-sidebar {
     display: none!important;
   }
   .poster.size-350.normal .poster-image {
