@@ -39,7 +39,6 @@
         <?php xnews_single_media(); ?>
         <?php xnews_single_cat(); ?>
         <?php xnews_single_title(); ?>
-        <?php xnews_single_share(); ?>
         <?php xnews_single_content_frame(); ?>
         <?php xnews_single_bottom_after(); ?>
       </div>
@@ -58,7 +57,6 @@
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
         <?php xnews_single_cat(); ?>
         <?php xnews_single_title(); ?>
-        <?php xnews_single_share(); ?>
         <?php xnews_single_content_frame(); ?>
         <?php xnews_single_bottom_after(); ?>
       </div>
@@ -84,7 +82,6 @@
     <div class="row">
 
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-        <?php xnews_single_share(); ?>
         <?php xnews_single_content_frame(); ?>
         <?php xnews_single_bottom_after(); ?>
       </div>
@@ -113,7 +110,6 @@
 
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
-        <?php xnews_single_share(); ?>
         <?php xnews_single_content_frame(); ?>
         <?php xnews_single_bottom_after(); ?>
       </div>
@@ -149,8 +145,6 @@
   <div class="container">
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-
-          <?php xnews_single_share(); ?>
 
           <?php xnews_single_content_frame(); ?>
           <?php xnews_single_bottom_after(); ?>
@@ -192,7 +186,6 @@
     <div class="container">
       <div class="row">
         <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-          <?php xnews_single_share(); ?>
           <?php xnews_single_content_frame(); ?>
           <?php xnews_single_bottom_after(); ?>
         </div>
@@ -224,7 +217,6 @@
   <div class="container">
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
-        <?php xnews_single_share(); ?>
         <?php xnews_single_content_frame(); ?>
         <?php xnews_single_bottom_after(); ?>
       </div>
@@ -245,7 +237,6 @@
 		      <?php xnews_single_title(); ?>
 				</div>
 				<div class="col-md-12">
-				  <?php xnews_single_share(); ?>
 				</div>
 			</div>
 		</div>
