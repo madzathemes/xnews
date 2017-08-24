@@ -40,8 +40,8 @@
         <?php xnews_single_cat(); ?>
         <?php xnews_single_title(); ?>
         <?php xnews_single_share(); ?>
-        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-        <?php xnews_single_bottom(); ?>
+        <?php xnews_single_content_frame(); ?>
+        <?php xnews_single_bottom_after(); ?>
       </div>
       <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php xnews_single_sidebar(); ?>
@@ -59,8 +59,8 @@
         <?php xnews_single_cat(); ?>
         <?php xnews_single_title(); ?>
         <?php xnews_single_share(); ?>
-        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-        <?php xnews_single_bottom(); ?>
+        <?php xnews_single_content_frame(); ?>
+        <?php xnews_single_bottom_after(); ?>
       </div>
       <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php xnews_single_sidebar(); ?>
@@ -85,8 +85,8 @@
 
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
         <?php xnews_single_share(); ?>
-        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-        <?php xnews_single_bottom(); ?>
+        <?php xnews_single_content_frame(); ?>
+        <?php xnews_single_bottom_after(); ?>
       </div>
       <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php xnews_single_sidebar(); ?>
@@ -114,8 +114,8 @@
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
 
         <?php xnews_single_share(); ?>
-        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-        <?php xnews_single_bottom(); ?>
+        <?php xnews_single_content_frame(); ?>
+        <?php xnews_single_bottom_after(); ?>
       </div>
       <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php xnews_single_sidebar(); ?>
@@ -152,8 +152,8 @@
 
           <?php xnews_single_share(); ?>
 
-        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-        <?php xnews_single_bottom(); ?>
+          <?php xnews_single_content_frame(); ?>
+          <?php xnews_single_bottom_after(); ?>
       </div>
       <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php xnews_single_sidebar(); ?>
@@ -193,8 +193,8 @@
       <div class="row">
         <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
           <?php xnews_single_share(); ?>
-          <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-          <?php xnews_single_bottom(); ?>
+          <?php xnews_single_content_frame(); ?>
+          <?php xnews_single_bottom_after(); ?>
         </div>
         <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
           <?php xnews_single_sidebar(); ?>
@@ -225,8 +225,8 @@
     <div class="row">
       <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?>">
         <?php xnews_single_share(); ?>
-        <div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-        <?php xnews_single_bottom(); ?>
+        <?php xnews_single_content_frame(); ?>
+        <?php xnews_single_bottom_after(); ?>
       </div>
       <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
         <?php xnews_single_sidebar(); ?>
@@ -252,8 +252,8 @@
 	<?php } ?>
   <div class="row">
     <div class="single-content col-md-8 <?php echo sanitize_html_class($fl); ?> ">
-			<div class="entry-content" itemprop="mainContentOfPage"><?php the_content(); ?></div>
-      <?php xnews_single_bottom(); ?>
+      <?php xnews_single_content_frame(); ?>
+      <?php xnews_single_bottom_after(); ?>
     </div>
     <div class="col-md-4 pull-left <?php echo sanitize_html_class($fs); ?> sidebar theiaStickySidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
       <?php xnews_single_sidebar(); ?>
