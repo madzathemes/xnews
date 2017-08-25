@@ -3924,11 +3924,14 @@ body.blog article {
   .poster.trending-carousel {
     width: 450px;
   }
+  .poster.size-350.normal .poster-image {
+    width: 240px;
+  }
 
   ul.sf-menu > li, div.sf-menu ul > li {
     margin-left: 15px;
     margin-right: 5px;
-}
+  }
 
   /* Header */
   .head-bookmark,
