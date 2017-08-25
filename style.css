@@ -575,6 +575,12 @@ pre {
     background: #f5f5f5;
     margin-top: 0px;
     margin-bottom: 20px;
+    padding: 20px;
+}
+cite {
+  font-size: 13px;
+  font-weight: normal;
+  color: gray;
 }
 select {
   width: 100%;
@@ -613,7 +619,7 @@ blockquote p {
   color: #40424c !important;
   padding-bottom: 0px;
 }
-.sticky {}
+.sticky { position: relative; }
 .entry-content ul,
 .entry-content ol{
   margin: 0px 0px 20px 40px;
@@ -632,7 +638,6 @@ blockquote p {
 }
 .wp-caption {
   padding: 0px;
-  background: #f5f5f5;
   margin-bottom: 20px;
   display: inline-block;
 }
@@ -722,8 +727,8 @@ table {
   padding-bottom: 0px;
 }
 .widget label.screen-reader-text { display: none; }
-.gallery-caption{}
-.bypostauthor{}
+.gallery-caption ,
+.bypostauthor { position: relative; }
 
 
 /* Layouts */
@@ -818,6 +823,9 @@ table {
 .head > div {
   display: table-cell;
   vertical-align: middle;
+}
+.wp-audio-shortcode {
+  margin-bottom: 20px;
 }
 
 /* Superfish Menu */
@@ -1611,6 +1619,9 @@ h2.heading span {
   display: inline-block;
   border-radius: 4px;
 }
+h2.heading .rsswidget {
+  color: white;
+}
 .title_bg_fix h2.heading span {
   background: #f5f5f5;
 }
@@ -2255,6 +2266,9 @@ h2.heading span {
   width: 100vw;
   left: calc(-50vw + 50%);
 }
+.textwidget .wp-caption p {
+  padding: 2px !important
+}
 .column-first {
   float: left;
   clear: both;
@@ -2731,7 +2745,7 @@ opacity: 0.7
 }
 .mt-single-02 .entry-content {
   padding-right: 40px;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 .mt-single-02 .after-title {
   margin-bottom: 10px;
@@ -3459,9 +3473,9 @@ opacity: 0.7
   padding: 5px 0px 0px;
 }
 body.blog article {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   margin-bottom: 40px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #40424c;
 }
 .comment-responses {
   padding: 20px 40px 20px;
@@ -3608,8 +3622,8 @@ body.blog article {
 }
 .post_sticky {
   padding: 20px 40px 40px;
-  background: #f1f1f1;
-  margin-bottom: 40px;
+  border: 2px solid #40424c;
+  margin-bottom: 20px;
 }
 .tags {
   font-size: 12px;
@@ -4531,6 +4545,8 @@ ul.page-numbers li {
   display: inline;
   margin: 0px;
   padding: 0px;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 .mt-pagepagination span,
@@ -4539,11 +4555,12 @@ ul.page-numbers li {
   padding: 8px 13px;
   margin: 0px 0px 0px 5px;
   background: #f5f5f5;
+  border-radius: 4px;
 }
 .mt-pagepagination a span,
 .page-links a {
   color: white;
-  background: #222;
+  background: #40424c;
 }
 .pagination {
   margin-bottom: 40px;
