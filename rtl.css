@@ -704,8 +704,8 @@ table {
   padding-bottom: 0px;
 }
 .widget label.screen-reader-text { display: none; }
-.gallery-caption{}
-.bypostauthor{}
+.gallery-caption,
+.bypostauthor{ position: relative;}
 
 
 /* Layouts */

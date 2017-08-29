@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.0
+  	Version: 1.1
     Theme Name: Xnews
     Theme URI: http://xnews.magazinethemes.staging.wpengine.com/
     Description: Magazine / Blog
@@ -1442,7 +1442,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   -webkit-transform: translateZ(0);
 }
 .header-top-on .header-wrap-space {
-  height: 89px;
+  height: 49px;
 }
 .header-wrap-space {
   height: 89px;
@@ -3923,9 +3923,6 @@ body.blog article {
 
   .poster.trending-carousel {
     width: 450px;
-  }
-  .poster.size-350.normal .poster-image {
-    width: 240px;
   }
 
   ul.sf-menu > li, div.sf-menu ul > li {
