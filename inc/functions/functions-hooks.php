@@ -354,7 +354,7 @@ function xnews_header_script() {
 		wp_script_add_data( 'jquery-respondmin', 'conditional', 'lt IE 9' );
 
 
-    function xnews_fonts_url() {
+    function xxnews_fonts_url() {
 
       $theme_font = "Lato:400,900,700";
 
