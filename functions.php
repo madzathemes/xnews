@@ -5,7 +5,7 @@
 /*-----------------------------------------------------------------------------------*/
 require get_template_directory() .'/inc/functions/functions-widget.php';
 require get_template_directory() .'/inc/functions/functions-header.php';
-require get_template_directory() .'/inc/functions/functions-hooks.php';
+require_once get_template_directory() .'/inc/functions/functions-hooks.php';
 require get_template_directory() .'/inc/functions/functions-comment.php';
 require get_template_directory() .'/inc/functions/functions-plugins.php';
 require get_template_directory() .'/inc/functions/functions-general.php';
