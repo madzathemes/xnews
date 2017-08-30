@@ -4325,7 +4325,7 @@ body.blog article {
     display: none;
   }
   .grid-post .layouts {
-    padding: 0px 20px 0px 20px!important;
+    padding: 0px 20px 20px 20px!important;
   }
 
   .post-style-8 .single-media-top {
