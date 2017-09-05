@@ -36,7 +36,7 @@ require get_template_directory() .'/inc/single/single-styles.php';
 /*-----------------------------------------------------------------------------------*/
 /* Theme Setup
 /*-----------------------------------------------------------------------------------*/
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+#add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 function xnews_theme_setup() {
 
