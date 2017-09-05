@@ -1916,7 +1916,7 @@ h2.heading .rsswidget {
 .poster-info .poster-cat {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  right: 10px;
 }
 .poster-cat {
   background: none!important;
@@ -1937,7 +1937,7 @@ h2.heading .rsswidget {
   color: white;
   position: absolute;
   bottom: -15px;
-  left: 15px;
+  right: 15px;
 }
 .poster-image:hover .poster-cat,
 .poster-image:hover .poster-data {
