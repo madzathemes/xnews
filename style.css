@@ -636,6 +636,18 @@ blockquote p {
 .entry-content ol ol {
   margin: 20px 0px 0px 10px;
 }
+
+.entry-content:before {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+.entry-content:after {
+  clear: both;
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
 .wp-caption {
   padding: 0px;
   margin-bottom: 20px;
@@ -3472,7 +3484,7 @@ opacity: 0.7
 body.blog article {
   padding-bottom: 40px;
   margin-bottom: 40px;
-  border-bottom: 2px solid #40424c;
+  border-bottom: 2px solid #dedede;
 }
 .comment-responses {
   padding: 20px 40px 20px;
