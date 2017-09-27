@@ -11,20 +11,6 @@ function xnews_customize_header($wp_customize){
 
 
 
-	Kirki::add_field( 'xnews_theme_options[boxed]', array(
-		'type'        => 'radio-image',
-		'settings'    => 'xnews_theme_options[boxed]',
-		'label'       => esc_html__( 'Page Layouts', 'xnews' ),
-		'section'     => 'general_style_settings',
-		'default'     => '2',
-		'option_type' => 'option',
-		'priority'    => 10,
-		'choices'     => array(
-				'1'   => get_template_directory_uri() . '/inc/img/boxed.png',
-				'2' => get_template_directory_uri() . '/inc/img/full.png',
-			 ),
-	));
-
 	$wp_customize->add_section('xnews_header', array(
         'title'    	=> esc_html__('Header', 'xnews'),
         'priority' => 124,
@@ -90,87 +76,7 @@ function xnews_customize_header($wp_customize){
         'settings' => 'xnews_theme_options[header_logox2]',
     )));
 
-    Kirki::add_field( 'xnews_theme_options[mobile_logo]', array(
-      'type'        => 'image',
-      'settings'    => 'xnews_theme_options[mobile_logo]',
-      'label'       => esc_html__( 'Mobile Logo', 'xnews' ),
-      'section'     => 'xnews_logo',
-      'default'     => '',
-      'option_type' => 'option',
-      'priority'    => 10,
-    ) );
 
-    //  =============================
-    //  = Logo Widht
-    //  =============================
-
-    Kirki::add_field( 'xnews_theme_options[logo_width]', array(
-    'type'        => 'number',
-    'settings'    => 'xnews_theme_options[logo_width]',
-    'label'       => esc_attr__( 'Width', 'xnews' ),
-    'section'     => 'xnews_logo_settings',
-    'default'     => 176,
-    'option_type' => 'option',
-    'choices'     => array(
-      'min'  => 20,
-      'max'  => 500,
-      'step' => 1,
-    ),
-  ) );
-
-    //  =============================
-    //  = Logo Height
-    //  =============================
-
-    Kirki::add_field( 'xnews_theme_options[logo_height]', array(
-    'type'        => 'number',
-    'settings'    => 'xnews_theme_options[logo_height]',
-    'label'       => esc_attr__( 'Height', 'xnews' ),
-    'section'     => 'xnews_logo_settings',
-    'default'     => 40,
-    'option_type' => 'option',
-    'choices'     => array(
-      'min'  => 20,
-      'max'  => 200,
-      'step' => 1,
-    ),
-  ) );
-
-	 //  =============================
-    //  = Logo margin Top
-    //  =============================
-
-
-    Kirki::add_field( 'xnews_theme_options[logo_top]', array(
-  	'type'        => 'number',
-  	'settings'    => 'xnews_theme_options[logo_top]',
-  	'label'       => esc_attr__( 'Top Space', 'xnews' ),
-  	'section'     => 'xnews_logo_settings',
-  	'default'     => 8,
-    'option_type' => 'option',
-  	'choices'     => array(
-  		'min'  => 0,
-  		'max'  => 120,
-  		'step' => 1,
-  	),
-  ) );
-
-    //  =============================
-    //  = Logo margin Bottom
-    //  =============================
-    Kirki::add_field( 'xnews_theme_options[logo_bottom]', array(
-  	'type'        => 'number',
-  	'settings'    => 'xnews_theme_options[logo_bottom]',
-  	'label'       => esc_attr__( 'Top Space', 'xnews' ),
-  	'section'     => 'xnews_logo_settings',
-  	'default'     => 8,
-    'option_type' => 'option',
-  	'choices'     => array(
-  		'min'  => 0,
-  		'max'  => 120,
-  		'step' => 1,
-  	),
-  ) );
 
     //  =============================
     //  = Logo Height fixed
@@ -484,63 +390,154 @@ function xnews_customize_header($wp_customize){
     ));
 
 
-   Kirki::add_field( 'mt_menu_small_on', array(
-     	'type'        => 'switch',
-     	'settings'    => 'mt_menu_small_on',
-     	'label'       => esc_attr__( 'Small Menu For Desktop', 'xnews' ),
-     	'section'     => 'xnews_header_top',
-     	'default'     => 'on',
-     	'priority'    => 10,
-     	'choices'     => array(
-     		'on'  => esc_attr__( 'On', 'xnews' ),
-     		'off' => esc_attr__( 'Off', 'xnews' ),
-     	),
-   ) );
+
+
+}
+
+add_action('customize_register', 'xnews_customize_header');
+
+
+Kirki::add_field( 'xnews_theme_options[boxed]', array(
+	'type'        => 'radio-image',
+	'settings'    => 'xnews_theme_options[boxed]',
+	'label'       => esc_html__( 'Page Layouts', 'xnews' ),
+	'section'     => 'general_style_settings',
+	'default'     => '2',
+	'option_type' => 'option',
+	'priority'    => 10,
+	'choices'     => array(
+			'1'   => get_template_directory_uri() . '/inc/img/boxed.png',
+			'2' => get_template_directory_uri() . '/inc/img/full.png',
+		 ),
+));
+
+
+Kirki::add_field( 'xnews_theme_options[mobile_logo]', array(
+  'type'        => 'image',
+  'settings'    => 'xnews_theme_options[mobile_logo]',
+  'label'       => esc_html__( 'Mobile Logo', 'xnews' ),
+  'section'     => 'xnews_logo',
+  'default'     => '',
+  'option_type' => 'option',
+  'priority'    => 10,
+) );
+
+//  =============================
+//  = Logo Widht
+//  =============================
+
+Kirki::add_field( 'xnews_theme_options[logo_width]', array(
+'type'        => 'number',
+'settings'    => 'xnews_theme_options[logo_width]',
+'label'       => esc_attr__( 'Width', 'xnews' ),
+'section'     => 'xnews_logo_settings',
+'default'     => 176,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 20,
+  'max'  => 500,
+  'step' => 1,
+),
+) );
+
+//  =============================
+//  = Logo Height
+//  =============================
+
+Kirki::add_field( 'xnews_theme_options[logo_height]', array(
+'type'        => 'number',
+'settings'    => 'xnews_theme_options[logo_height]',
+'label'       => esc_attr__( 'Height', 'xnews' ),
+'section'     => 'xnews_logo_settings',
+'default'     => 40,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 20,
+  'max'  => 200,
+  'step' => 1,
+),
+) );
+
+//  =============================
+//  = Logo margin Top
+//  =============================
+
+
+Kirki::add_field( 'xnews_theme_options[logo_top]', array(
+'type'        => 'number',
+'settings'    => 'xnews_theme_options[logo_top]',
+'label'       => esc_attr__( 'Top Space', 'xnews' ),
+'section'     => 'xnews_logo_settings',
+'default'     => 8,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 0,
+  'max'  => 120,
+  'step' => 1,
+),
+) );
+
+//  =============================
+//  = Logo margin Bottom
+//  =============================
+Kirki::add_field( 'xnews_theme_options[logo_bottom]', array(
+'type'        => 'number',
+'settings'    => 'xnews_theme_options[logo_bottom]',
+'label'       => esc_attr__( 'Top Space', 'xnews' ),
+'section'     => 'xnews_logo_settings',
+'default'     => 8,
+'option_type' => 'option',
+'choices'     => array(
+  'min'  => 0,
+  'max'  => 120,
+  'step' => 1,
+),
+) );
+
+Kirki::add_field( 'mt_menu_small_on', array(
+   'type'        => 'switch',
+   'settings'    => 'mt_menu_small_on',
+   'label'       => esc_attr__( 'Small Menu For Desktop', 'xnews' ),
+   'section'     => 'xnews_header_top',
+   'default'     => 'on',
+   'priority'    => 10,
+   'choices'     => array(
+     'on'  => esc_attr__( 'On', 'xnews' ),
+     'off' => esc_attr__( 'Off', 'xnews' ),
+   ),
+) );
 
 
 
-   Kirki::add_field( 'mt_menu_search', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_menu_search',
-       'label'       => esc_attr__( 'Search Button', 'xnews' ),
-       'section'     => 'xnews_header_top',
-       'default'     => 'on',
-       'priority'    => 10,
-       'choices'     => array(
-      		'on'  => esc_attr__( 'On', 'xnews' ),
-      		'off' => esc_attr__( 'Off', 'xnews' ),
-      	),
-   ) );
-
-   Kirki::add_field( 'mt_header_top', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_header_top',
-       'label'       => esc_attr__( 'Header Top', 'xnews' ),
-       'section'     => 'xnews_header_top',
-       'default'     => 'on',
-      	'priority'    => 10,
-      	'choices'     => array(
-      		'on'  => esc_attr__( 'On', 'xnews' ),
-      		'off' => esc_attr__( 'Off', 'xnews' ),
-      	),
-   ) );
-   Kirki::add_field( 'mt_top_follower', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_top_follower',
-       'label'       => esc_attr__( 'Header Top Follower Count', 'xnews' ),
-       'section'     => 'xnews_header_top',
-       'default'     => 'on',
-       'priority'    => 10,
-       'choices'     => array(
-         'on'  => esc_attr__( 'On', 'xnews' ),
-         'off' => esc_attr__( 'Off', 'xnews' ),
-       ),
-   ) );
-
-   Kirki::add_field( 'mt_menu_share', array(
+Kirki::add_field( 'mt_menu_search', array(
     'type'        => 'switch',
-    'settings'    => 'mt_menu_share',
-    'label'       => esc_attr__( 'Fixed Share Buttons', 'xnews' ),
+    'settings'    => 'mt_menu_search',
+    'label'       => esc_attr__( 'Search Button', 'xnews' ),
+    'section'     => 'xnews_header_top',
+    'default'     => 'on',
+    'priority'    => 10,
+    'choices'     => array(
+       'on'  => esc_attr__( 'On', 'xnews' ),
+       'off' => esc_attr__( 'Off', 'xnews' ),
+     ),
+) );
+
+Kirki::add_field( 'mt_header_top', array(
+    'type'        => 'switch',
+    'settings'    => 'mt_header_top',
+    'label'       => esc_attr__( 'Header Top', 'xnews' ),
+    'section'     => 'xnews_header_top',
+    'default'     => 'on',
+     'priority'    => 10,
+     'choices'     => array(
+       'on'  => esc_attr__( 'On', 'xnews' ),
+       'off' => esc_attr__( 'Off', 'xnews' ),
+     ),
+) );
+Kirki::add_field( 'mt_top_follower', array(
+    'type'        => 'switch',
+    'settings'    => 'mt_top_follower',
+    'label'       => esc_attr__( 'Header Top Follower Count', 'xnews' ),
     'section'     => 'xnews_header_top',
     'default'     => 'on',
     'priority'    => 10,
@@ -548,52 +545,60 @@ function xnews_customize_header($wp_customize){
       'on'  => esc_attr__( 'On', 'xnews' ),
       'off' => esc_attr__( 'Off', 'xnews' ),
     ),
+) );
+
+Kirki::add_field( 'mt_menu_share', array(
+ 'type'        => 'switch',
+ 'settings'    => 'mt_menu_share',
+ 'label'       => esc_attr__( 'Fixed Share Buttons', 'xnews' ),
+ 'section'     => 'xnews_header_top',
+ 'default'     => 'on',
+ 'priority'    => 10,
+ 'choices'     => array(
+   'on'  => esc_attr__( 'On', 'xnews' ),
+   'off' => esc_attr__( 'Off', 'xnews' ),
+ ),
+ ));
+
+ Kirki::add_field( 'xnews_theme_options[menu_fixed]', array(
+  'type'        => 'select',
+  'settings'    => 'xnews_theme_options[menu_fixed]',
+  'label'       => esc_attr__( 'Fixed Header', 'xnews' ),
+  'section'     => 'xnews_header_top',
+  'default'     => 'mt-fixed-up',
+  'option_type' => 'option',
+  'priority'    => 10,
+  'multiple'    => 1,
+  'choices'     => array(
+    'mt-fixed-up' => esc_attr__( 'Show When Scroll Up', 'xnews' ),
+    'mt-fixed-always' => esc_attr__( 'Show Always', 'xnews' ),
+    'mt-fixed-disabled' => esc_attr__( 'Disable', 'xnews' ),
+  ),
+  ));
+
+  Kirki::add_field( 'mt_header_time', array(
+   'type'        => 'switch',
+   'settings'    => 'mt_header_time',
+   'label'       => esc_attr__( 'Header Time', 'xnews' ),
+   'section'     => 'xnews_header_top',
+   'default'     => 'off',
+   'priority'    => 10,
+   'choices'     => array(
+     'on'  => esc_attr__( 'On', 'xnews' ),
+     'off' => esc_attr__( 'Off', 'xnews' ),
+   ),
+   ));
+
+   Kirki::add_field( 'mt_header_date', array(
+    'type'        => 'switch',
+    'settings'    => 'mt_header_date',
+    'label'       => esc_attr__( 'Header Date', 'xnews' ),
+    'section'     => 'xnews_header_top',
+    'default'     => 'off',
+    'priority'    => 10,
+    'choices'     => array(
+      'on'  => esc_attr__( 'On', 'xnews' ),
+      'off' => esc_attr__( 'Off', 'xnews' ),
+    ),
     ));
-
-    Kirki::add_field( 'xnews_theme_options[menu_fixed]', array(
-     'type'        => 'select',
-     'settings'    => 'xnews_theme_options[menu_fixed]',
-     'label'       => esc_attr__( 'Fixed Header', 'xnews' ),
-     'section'     => 'xnews_header_top',
-     'default'     => 'mt-fixed-up',
-     'option_type' => 'option',
-     'priority'    => 10,
-     'multiple'    => 1,
-     'choices'     => array(
-       'mt-fixed-up' => esc_attr__( 'Show When Scroll Up', 'xnews' ),
-       'mt-fixed-always' => esc_attr__( 'Show Always', 'xnews' ),
-       'mt-fixed-disabled' => esc_attr__( 'Disable', 'xnews' ),
-     ),
-     ));
-
-     Kirki::add_field( 'mt_header_time', array(
-      'type'        => 'switch',
-      'settings'    => 'mt_header_time',
-      'label'       => esc_attr__( 'Header Time', 'xnews' ),
-      'section'     => 'xnews_header_top',
-      'default'     => 'off',
-      'priority'    => 10,
-      'choices'     => array(
-        'on'  => esc_attr__( 'On', 'xnews' ),
-        'off' => esc_attr__( 'Off', 'xnews' ),
-      ),
-      ));
-
-      Kirki::add_field( 'mt_header_date', array(
-       'type'        => 'switch',
-       'settings'    => 'mt_header_date',
-       'label'       => esc_attr__( 'Header Date', 'xnews' ),
-       'section'     => 'xnews_header_top',
-       'default'     => 'off',
-       'priority'    => 10,
-       'choices'     => array(
-         'on'  => esc_attr__( 'On', 'xnews' ),
-         'off' => esc_attr__( 'Off', 'xnews' ),
-       ),
-       ));
-
-}
-
-add_action('customize_register', 'xnews_customize_header');
-
 ?>
